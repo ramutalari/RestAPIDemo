@@ -3,17 +3,21 @@ import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 public class TC001GETEx
 {
     @Test
     void getWeatherDetails()
     {
-        //Specify baseURI
+        //Specify baseURI - It is path parameter
        final String URI = "http://restapi.demoqa.com/utilities/weather/city/Hyderabad";
-
+//Query Parameter
 // final String endpointURI2 ="https://samples.openweathermap.org/data/2.5/forecast?q=London,us&appid=439d4b804bc8187953eb36d2a8c26a02";
+        //Query parameter
+        //  https://reqres.in/api/users?page=2
 
         //RestAssured.baseURI = "http://restapi.demoqa.com/utilities/weather/city/";
         RestAssured.baseURI = URI;
@@ -33,6 +37,8 @@ public class TC001GETEx
         System.out.println("Response code is:"+responseCode);
         System.out.println();
 
+        SoftAssert sassert = new SoftAssert();
+
         //2-By using ValidatableResponse
         ValidatableResponse validatableResp = httpRequest.get(URI).then();
         int statusCode = validatableResp.extract().statusCode();
@@ -42,10 +48,41 @@ public class TC001GETEx
         System.out.println("Status code is:"+statusCode);
         System.out.println("Response body is:"+body);
 
-        //ValidatableResponse res2 = RestAssured.given().relaxedHTTPSValidation().contentType(ContentType.JSON).header();
-        
-    }
+        //To get the header
+        String contenttype = response.header("content-type");
+        System.out.println("content-type header is: "+contenttype);
+        sassert.assertEquals(contenttype,"application");
 
+        String statusLine = response.statusLine();
+        sassert.assertEquals(statusLine,"HTTP/1.1 200 OK");
+        System.out.println("Status line is:"+statusLine);
+
+        System.out.println("This is by using soft assert");
+
+        sassert.assertAll();
+
+        //when we have to use given when then
+        //when we are using query parameter we can use like below
+//        public void getUserDetails() {
+//        Response response = RestAssured.given()
+//                .baseUri("https://samples.openweathermap.org")
+//                .basePath("data/2.5/weather")
+//                .queryParam("q", "London,uk")
+//                .queryParam("appid", "b6907d289e10d714a6e88b30761fae22")
+//                .when()
+//                .get();
+//        System.out.println(response.getBody().asString());
+//
+//        int statuscode = response.getStatusCode();
+//        System.out.println("status code is : "+statuscode);
+//    }
+//
+
+
+
+
+        //ValidatableResponse res2 = RestAssured.given().relaxedHTTPSValidation().contentType(ContentType.JSON).header();
+    }
 //    public ValidatableResponse servicePost(String endpoint, Map<String,String> header, String body){
 //        ValidatableResponse res2 = (ValidatableResponse) RestAssured.
 //                given().relaxedHTTPSValidation().
