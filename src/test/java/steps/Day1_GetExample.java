@@ -29,6 +29,9 @@ public class Day1_GetExample {
             validatableResponse.extract().statusCode();
             Response response1 = requestSpecification.get(GET_POST_INFORMATION);
             response1.getStatusCode();
+
+
+
         }
     }
          //Response is a class // ValidatableResponse }

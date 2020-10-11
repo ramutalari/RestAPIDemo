@@ -9,9 +9,6 @@ import org.json.simple.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class TC002POSTExample {
 
     @Test
@@ -42,7 +39,5 @@ public class TC002POSTExample {
 
         String responseBody =response.getBody().asString();
         System.out.println("Response Body is:"+responseBody);
-
-        
     }
 }
