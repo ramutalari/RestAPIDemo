@@ -1,4 +1,4 @@
-package steps;
+package RestAssuredProgr;
 
 import io.cucumber.core.internal.gherkin.deps.com.google.gson.JsonObject;
 import io.restassured.RestAssured;

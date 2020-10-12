@@ -6,15 +6,15 @@ public class DuplicateCharinString {
 
         String str = "beatiful beach";
 
-        char array[] = str.toCharArray();
+        char arr[] = str.toCharArray();
         System.out.println("Duplicate characters in the string "+ str +  " are: ");
         for (int i=0;i<str.length();i++)
         {
             for(int j=i+1;j<str.length();j++)
             {
-                if (array[i]==array[j])
+                if (arr[i]==arr[j])
                 {
-                    System.out.println(array[j]+ " ");
+                    System.out.println(arr[j]+ " ");
                     break;
                 }
             }

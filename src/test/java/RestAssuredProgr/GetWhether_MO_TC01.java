@@ -1,3 +1,5 @@
+package RestAssuredProgr;
+
 import static io.restassured.RestAssured.*;
 import io.restassured.response.Response;
 import org.testng.Assert;
@@ -5,7 +7,6 @@ import org.testng.annotations.Test;
 
 public class GetWhether_MO_TC01
 {
-
     @Test
     public void getWhether()
     {

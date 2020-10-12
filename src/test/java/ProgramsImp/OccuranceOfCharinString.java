@@ -3,7 +3,7 @@ package ProgramsImp;
 public class OccuranceOfCharinString {
 
     static void countEachChar(String str) {
-        //ASCII values ranges upto 256
+        //ASCII values ranges up to 256
         int counter[] = new int[256];
 
         //String length
@@ -18,16 +18,16 @@ public class OccuranceOfCharinString {
             counter[str.charAt(i)]++;
 
         // We are creating another array with the size of String
-        char array[] = new char[str.length()];
+        char arr[] = new char[str.length()];
         for (int i = 0; i < len; i++) {
-            array[i] = str.charAt(i);
+            arr[i] = str.charAt(i);
             int flag = 0;
             for (int j = 0; j <= i; j++) {
 
                 /* If a char is found in String then set the flag
                  * so that we can print the occurrence
                  */
-                if (str.charAt(i) == array[j])
+                if (str.charAt(i) == arr[j])
                     flag++;
             }
 
