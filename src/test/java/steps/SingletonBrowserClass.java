@@ -4,11 +4,10 @@
 //
 //    public class SingletonBrowserClass {
 //
+//        private WebDriver driver;
+//
 //        // instance of singleton class
 //        private static SingletonBrowserClass instanceOfSingletonBrowserClass=null;
-//
-//
-//        private WebDriver driver;
 //
 //        // Constructor
 //        private SingletonBrowserClass(){
