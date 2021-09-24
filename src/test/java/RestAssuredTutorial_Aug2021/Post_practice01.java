@@ -1,31 +1,33 @@
 package RestAssuredTutorial_Aug2021;
 
+
+
 import org.json.simple.JSONObject;
 import org.testng.annotations.Test;
 import static io.restassured.RestAssured.*;
-import java.util.HashMap;
-import java.util.Map;
 
-public class TC005_POST_Example {
+
+public class Post_practice01 {
 
     @Test
-    public void testPost()
+    public void postTest()
     {
+        baseURI = "https://reqres.in/api";
+
         JSONObject request = new JSONObject();
 
-        request.put("name","Aadhya Ram");
-        request.put("hobby","Badminton");
-
-        baseURI = "https://reqres.in/api";
+        request.put("name","AbhiRam");
+        request.put("hobby","swimming");
 
         given().
                 header("Content-Type","application/json").
                 body(request.toJSONString()).
         when().
-                post("/users/2").
+                post("/users/api").
         then().
                 statusCode(201).
                 log().
                 all();
+
     }
 }
