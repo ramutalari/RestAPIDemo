@@ -1,3 +1,4 @@
+
 package Workspace_01;
 
 import java.util.Arrays;
@@ -26,7 +27,7 @@ public class Anagram {
         }
         if(status)
         {
-            System.out.println(s1.toLowerCase() + " and "+ s2.toLowerCase() + " are ANAGRAM");;
+            System.out.println(s1.toLowerCase() + " and "+ s2.toLowerCase() + " are ANAGRAM");
         }
         else
         {

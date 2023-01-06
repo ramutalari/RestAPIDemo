@@ -19,8 +19,5 @@ public class BasicAuthentication_pr01 {
 
         RequestSpecification httpRequest = RestAssured.given();
         Response response = httpRequest.get(URI);
-
-
     }
-
 }

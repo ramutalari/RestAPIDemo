@@ -12,8 +12,11 @@ public class HashMapWithIterator {
         hmap.put(1, "TCS");
         hmap.put(2, "Infosys");
         hmap.put(3, "Simens");
-        hmap.put(9, "HCL");
+        hmap.put(4, "HCL");
         hmap.put(5, "Dell");
+        hmap.put(5, "Dell2");
+        hmap.put(4, "HCL3");
+        hmap.put(2, "Infosys4");
 
         Set entrySet = hmap.entrySet();
 
@@ -24,6 +27,5 @@ public class HashMapWithIterator {
             Map.Entry me = (Map.Entry)it.next();
             System.out.println(me.getKey()+" "+me.getValue());
         }
-
     }
 }
