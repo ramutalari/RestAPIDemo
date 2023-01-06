@@ -1,4 +1,6 @@
 
+
+
 package Workspace_01;
 
 public class OccuranceOfCharinString {
@@ -39,7 +41,6 @@ public class OccuranceOfCharinString {
     }
         public static void main (String[]args)
         {
-
            // String str = "beginnersbook";
             String str = "Bangalore";
             countEachChar(str);

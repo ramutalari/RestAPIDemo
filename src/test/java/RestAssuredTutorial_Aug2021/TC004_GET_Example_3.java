@@ -10,7 +10,7 @@ public class TC004_GET_Example_3 {
     @Test
     public void compareMoreItems()
     {
-        baseURI = "https://reqres.in/api";https:
+        baseURI = "https://reqres.in/api";
         given().
                 get("/users?page=2").
                 then().
