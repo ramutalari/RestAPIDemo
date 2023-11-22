@@ -8,6 +8,10 @@ public class CountNumberOfVowelsInString {
 
         //Converting entire string to lower case to reduce the comparisons
         str = str.toLowerCase();
+
+        //To remove the space between words in the given string
+        str = str.replaceAll("\\s", "");
+
         //Counter variable to store the count of vowels and consonant
         int vCount = 0, cCount = 0;
 
@@ -19,7 +23,7 @@ public class CountNumberOfVowelsInString {
             }
 
             //Checks whether a character is a consonant
-            else if(str.charAt(i) >= 'a' && str.charAt(i)<='z') {
+            else if(str.charAt(i) > 'a' && str.charAt(i)<='z') {
                 //Increments the consonant counter
                 cCount++;
             }
