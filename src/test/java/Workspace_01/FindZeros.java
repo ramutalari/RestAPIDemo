@@ -16,7 +16,7 @@ public class FindZeros {
         else if (lastNumber == 10)
             System.out.println(count);
         else {
-            for (int i = 11; i <= lastNumber; i++) {
+            for (int i = 10; i <= lastNumber; i++) {
                 k = i;
                 while (k > 0) {
                     if (k % 10 == 0)
