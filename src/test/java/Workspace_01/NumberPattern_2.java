@@ -5,8 +5,9 @@ public class NumberPattern_2 {
     public static void main(String[] args) {
 
         int i,j,k=1;
+        int row=7;
 
-        for (i=1;i<=7;i++)
+        for (i=1;i<=row;i++)
         {
             for (j=1;j<i+1;j++)
             {
