@@ -10,11 +10,11 @@ public class FindZeros {
         Scanner scanner = new Scanner(System.in);
         int lastNumber = scanner.nextInt();
 
-        int count = 1, k;
+        int count = 0, k;
         if (lastNumber < 10)
             System.out.println("Number of zeros are: "+ 0);
         else if (lastNumber == 10)
-            System.out.println(count);
+            System.out.println("Number of zeros are: "+1);
         else {
             for (int i = 10; i <= lastNumber; i++) {
                 k = i;
